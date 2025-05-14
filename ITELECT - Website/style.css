@@ -1,0 +1,55 @@
+body{
+    margin: 20px;
+}
+
+.nav-link {
+    color: black !important;
+  }
+
+.bg-fixed {
+    background-image: url('./pics/nature-g7de9363cc_1280.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 93vh;
+    width: 100%;
+  }
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: translucent overlay */
+    padding: 2rem;
+    border-radius: 10px;
+  }
+
+  @keyframes fadeSlideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-slide {
+    animation: fadeSlideUp 1s ease-out forwards;
+  }
+
+  .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .custom-dropdown {
+    top: 15px !important;  /* Move it down by 10px */
+    right: 10px !important;
+  }
+  
+
+  
