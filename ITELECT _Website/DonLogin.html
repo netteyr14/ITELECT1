@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body style="background-image: url('./pics/mountain_landscape25_generated.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; height: 100vh; width: 100%; overflow: hidden;">
+    <div class="greet-box mx-auto p-4 bg-white rounded shadow" style="max-width: 400px; height: 530px;">
+        <h2 class="mb-4 text-center"><b>Donor Login</b></h2>
+        <form onsubmit="greetUser(event)">
+            <label class="form-label"><b>Login Using:</b></label>
+            <div class="mb-3 d-flex flex-column social-btns">
+                <button type="button" class="btn btn-outline-danger w-100"
+                    onclick="window.location.href='DonDash.html';">Gmail</button>
+                <button type="button" class="btn btn-outline-primary w-100"
+                    onclick="window.location.href='DonDash.html';">Facebook</button>
+                <button type="button" class="btn btn-outline-dark w-100"
+                    onclick="window.location.href='DonDash.html';">X/Twitter</button>
+            </div>
+            <label for="emailInput" class="form-label"><b>Email/Username:</b></label>
+            <input type="text" class="form-control mb-2" id="emailInput" placeholder="Enter your email or username"
+                autocomplete="username">
+            <label for="passwordInput" class="form-label"><b>Password:</b></label>
+            <input type="password" class="form-control mb-3" id="passwordInput" placeholder="Enter your password"
+                autocomplete="current-password">
+            <button type="submit" class="btn btn-success w-100"><b>Sign In</b></button>
+            <div class="text-center mt-3">
+                <small>
+                Not a donor? <a href="OrgLogin.html" class="text-primary">Login as Organization</a>
+                </small>
+            </div>
+            <div class="alert alert-info mt-4 d-none" id="greetingAlert" role="alert"></div>
+        </form>
+    </div>
+
+    <script>
+        function greetUser(event) {
+            event.preventDefault();
+            const name = document.getElementById("emailInput").value;
+            const passw = document.getElementById("passwordInput").value;
+            const alertBox = document.getElementById("greetingAlert");
+
+            if (name.trim() == "SheeshKebab1" && passw.trim() == "User") {
+                alertBox.innerText = `Hello, ${name}! Welcome`;
+                alertBox.classList.remove("d-none", "alert-danger");
+                alertBox.classList.remove("d-none", "alert-warning");
+                alertBox.classList.add("alert-info");
+                setTimeout(() => {
+                    window.location.href = 'DonDash.html';
+                }, 1000);
+            } else if (name.trim() == "" && passw.trim() == "") {
+                alertBox.innerText = "Please enter your email or username!";
+                alertBox.classList.remove("d-none", "alert-info");
+                alertBox.classList.remove("d-none", "alert-danger");
+                alertBox.classList.add("alert-warning");
+            } else {
+                alertBox.innerText = "Invalid Username or Password!";
+                alertBox.classList.remove("d-none", "alert-warning");
+                alertBox.classList.remove("d-none", "alert-info");
+                alertBox.classList.add("alert-danger");
+            }
+        }
+
+        // Also set it on page load (in case user refreshes with modal closed)
+        document.body.style.overflow = 'hidden';
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

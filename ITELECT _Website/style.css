@@ -1,0 +1,150 @@
+body {
+    margin: 20px;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.bg-fixed {
+    background-image: url('./pics/nature-g7de9363cc_1280.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 93vh;
+    width: 100%;
+}
+
+.content {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Optional: translucent overlay */
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-slide {
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-dropdown {
+    top: 20px !important;
+    /* Move it down by 10px */
+}
+
+
+/*login org.*/
+
+.greet-box {
+    width: 400px;
+    height: 200px;
+    margin: 300px auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 400px;
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10) !important;
+    border-radius: 16px !important;
+    margin-top: 6vh !important;
+    margin-bottom: 6vh !important;
+}
+
+.acc-select {
+    align-items: center;
+}
+
+.acc-btns {
+    list-style-type: none;
+    text-align: center;
+    margin-right: 300px;
+}
+
+.acc-btns li {
+    padding-left: 10px;
+}
+
+.acc-btns li button {
+    background-color: rgb(43, 148, 82);
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/*all cards*/
+
+.container1{
+    display: flex;
+    margin-left: 100px;
+}
+
+.social-btns .btn {
+    margin-bottom: 10px;
+}
+
+/* Dark mode modal styles */
+        body.dark-mode .modal-content {
+            background-color: #23272b !important;
+            color: #f8f9fa !important;
+        }
+
+        body.dark-mode .modal-header,
+        body.dark-mode .modal-footer {
+            border-color: #343a40 !important;
+        }
+
+        body.dark-mode .modal-title,
+        body.dark-mode .modal-header,
+        body.dark-mode .modal-footer,
+        body.dark-mode .modal-body,
+        body.dark-mode .form-label,
+        body.dark-mode .form-control,
+        body.dark-mode .form-select,
+        body.dark-mode .alert-success {
+            color: #f8f9fa !important;
+            background-color: transparent !important;
+        }
+
+        body.dark-mode .form-control,
+        body.dark-mode .form-select {
+            background-color: #343a40 !important;
+            border-color: #495057 !important;
+            color: #f8f9fa !important;
+        }
+
+        body.dark-mode .form-control:focus,
+        body.dark-mode .form-select:focus {
+            background-color: #23272b !important;
+            color: #f8f9fa !important;
+            border-color: #6c757d !important;
+        }
+
+        body.dark-mode .btn-close {
+            filter: invert(1);
+        }
+
+        body.dark-mode .alert-success {
+            background-color: #27472f !important;
+            color: #d4edda !important;
+            border-color: #27472f !important;
+        }
