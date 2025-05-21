@@ -63,8 +63,11 @@ body {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 400px;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 20px;
+    background: rgba(255,255,255,0.95) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10) !important;
+    border-radius: 16px !important;
+    margin-top: 6vh !important;
+    margin-bottom: 6vh !important;
 }
 
 .acc-select {
@@ -87,3 +90,61 @@ body {
     margin-bottom: 5px;
     color: white;
 }
+
+/*all cards*/
+
+.container1{
+    display: flex;
+    margin-left: 100px;
+}
+
+.social-btns .btn {
+    margin-bottom: 10px;
+}
+
+/* Dark mode modal styles */
+        body.dark-mode .modal-content {
+            background-color: #23272b !important;
+            color: #f8f9fa !important;
+        }
+
+        body.dark-mode .modal-header,
+        body.dark-mode .modal-footer {
+            border-color: #343a40 !important;
+        }
+
+        body.dark-mode .modal-title,
+        body.dark-mode .modal-header,
+        body.dark-mode .modal-footer,
+        body.dark-mode .modal-body,
+        body.dark-mode .form-label,
+        body.dark-mode .form-control,
+        body.dark-mode .form-select,
+        body.dark-mode .alert-success {
+            color: #f8f9fa !important;
+            background-color: transparent !important;
+        }
+
+        body.dark-mode .form-control,
+        body.dark-mode .form-select {
+            background-color: #343a40 !important;
+            border-color: #495057 !important;
+            color: #f8f9fa !important;
+        }
+
+        body.dark-mode .form-control:focus,
+        body.dark-mode .form-select:focus {
+            background-color: #23272b !important;
+            color: #f8f9fa !important;
+            border-color: #6c757d !important;
+        }
+
+        body.dark-mode .btn-close {
+            filter: invert(1);
+        }
+
+        body.dark-mode .alert-success {
+            background-color: #27472f !important;
+            color: #d4edda !important;
+            border-color: #27472f !important;
+        }
