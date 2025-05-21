@@ -323,3 +323,8 @@ body.dark-mode .modal-body .form-control::placeholder {
     color: #b0b3b8 !important;
     opacity: 1;
 }
+
+/* Add to dash.css */
+.dark-mode .organizer-name {
+    color: #b0e57c !important; /* or any light color for dark backgrounds */
+}
