@@ -1,4 +1,4 @@
-ITELECT
+ITELECT - 1
 =======
 Final Project for IT Elective 1
 
